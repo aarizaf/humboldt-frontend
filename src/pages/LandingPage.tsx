@@ -24,11 +24,11 @@ const LandingPage: React.FC = () => (
     <section className="values-section">
       <div className="values-block">
         <h3 className="values-title">
-          <span className="sherr-color sh">S</span>
-          <span className="sherr-color h">H</span>
-          <span className="sherr-color e">E</span>
-          <span className="sherr-color r1">R</span>
-          <span className="sherr-color r2">R</span>
+          
+          <span className="sherr-color sh">O</span>
+          <span className="sherr-color h">U</span>
+          <span className="sherr-color e">R</span>
+          
           <span> Values</span>
         </h3>
         <p className="values-desc">
