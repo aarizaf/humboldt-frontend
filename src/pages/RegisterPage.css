@@ -1,0 +1,89 @@
+/* Selector compuesto: especificidad (0,2,0) — gana siempre a las reglas de login-card */
+.login-card.register-card {
+  max-width: 480px;
+  padding: 40px 48px 36px;
+  align-items: stretch;
+}
+
+.login-card.register-card .login-logo {
+  display: block;
+  margin: 0 auto 28px;
+  align-self: auto;
+}
+
+.login-card.register-card .login-form {
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.login-card.register-card .login-input-group {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-card.register-card .login-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-card.register-card .login-submit-btn {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.register-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.register-row .login-input-group {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+}
+
+/* Select estilizado igual que los inputs */
+.register-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a5568' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.register-login-link {
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: #555;
+  text-align: center;
+  width: 100%;
+}
+
+.register-link {
+  color: #1a5d1a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.register-link:hover {
+  color: #145214;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-card.register-card {
+    padding: 36px 28px 32px;
+  }
+
+  .register-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

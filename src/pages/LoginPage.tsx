@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from '../hooks/useForm';
 import { login } from '../services/authService';
 import escudo from '../assets/escudo.jpg';
 import './LoginPage.css';
+import './RegisterPage.css';
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -85,6 +86,13 @@ function LoginPage() {
             {isSubmitting ? 'Entrando...' : 'Entrar'}
           </button>
         </form>
+
+        <p className="register-login-link">
+          ¿No tienes cuenta?{' '}
+          <Link to="/register" className="register-link">
+            Regístrate
+          </Link>
+        </p>
       </div>
 
       <p className="login-footer-text">¡De camino a la excelencia!</p>
