@@ -15,6 +15,7 @@ export const SEED_MATERIAS: Materia[] = [
     cursoNombre: '10-A',
     profesorId: 'profesor1',
     profesorNombre: 'Prof. Camilo Ríos',
+    imagenUrl: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'materia-ciencias',
@@ -23,6 +24,7 @@ export const SEED_MATERIAS: Materia[] = [
     cursoNombre: '10-A',
     profesorId: 'profesor1',
     profesorNombre: 'Prof. Camilo Ríos',
+    imagenUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'materia-ingles',
@@ -31,6 +33,7 @@ export const SEED_MATERIAS: Materia[] = [
     cursoNombre: '10-A',
     profesorId: 'profesor2',
     profesorNombre: 'Prof. Laura Gómez',
+    imagenUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'materia-sociales',
@@ -39,6 +42,7 @@ export const SEED_MATERIAS: Materia[] = [
     cursoNombre: '10-A',
     profesorId: 'profesor2',
     profesorNombre: 'Prof. Laura Gómez',
+    imagenUrl: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80',
   },
 ];
 

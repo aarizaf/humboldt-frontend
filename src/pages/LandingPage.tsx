@@ -1,6 +1,8 @@
 import Navbar from '../components/Navbar';
 import {
   HeroSection,
+  AboutSection,
+  DistinctivesSection,
   HighlightSection,
   ValuesSection,
   InstagramFeed,
@@ -13,8 +15,10 @@ function LandingPage() {
     <div className="landing-page">
       <Navbar />
       <HeroSection />
+      <DistinctivesSection />
       <HighlightSection />
       <ValuesSection />
+      <AboutSection />
       <InstagramFeed />
       <ContactSection />
     </div>

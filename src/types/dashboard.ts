@@ -19,6 +19,7 @@ export interface Materia {
   cursoNombre: string;
   profesorId: string;
   profesorNombre: string;
+  imagenUrl: string;
 }
 
 export interface MateriaConPendientes extends Materia {

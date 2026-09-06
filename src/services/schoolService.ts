@@ -69,6 +69,11 @@ export async function getActividadesByMateriaForEstudiante(
     .sort((a, b) => a.fechaLimite.localeCompare(b.fechaLimite));
 }
 
+export async function getMateriasByProfesor(profesorId: string): Promise<Materia[]> {
+  const store = loadStore();
+  return store.materias.filter((materia) => materia.profesorId === profesorId);
+}
+
 export async function getMateriaById(materiaId: string): Promise<Materia | undefined> {
   const store = loadStore();
   return store.materias.find((m) => m.id === materiaId);

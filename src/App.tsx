@@ -7,8 +7,9 @@ import ProtectedRoute from './routes/ProtectedRoute';
 import RoleRoute from './routes/RoleRoute';
 import DashboardLayout from './layouts/DashboardLayout';
 import DashboardIndex from './pages/dashboard/DashboardIndex';
-import MisMaterias from './pages/dashboard/estudiante/MisMaterias';
-import MateriaDetalle from './pages/dashboard/estudiante/MateriaDetalle';
+import MisMaterias from './pages/dashboard/materias/MisMaterias';
+import MateriaLayout from './pages/dashboard/materias/MateriaLayout';
+import ActividadesTab from './pages/dashboard/materias/tabs/ActividadesTab';
 import ComingSoon from './components/ComingSoon';
 
 function App() {
@@ -24,21 +25,60 @@ function App() {
             <Route element={<DashboardLayout />}>
               <Route index element={<DashboardIndex />} />
 
-              <Route element={<RoleRoute allow={['estudiante']} />}>
+              <Route element={<RoleRoute allow={['estudiante', 'profesor']} />}>
                 <Route path="materias" element={<MisMaterias />} />
-                <Route path="materias/:materiaId" element={<MateriaDetalle />} />
+                <Route path="materias/:materiaId" element={<MateriaLayout />}>
+                  <Route index element={<Navigate to="evaluaciones/actividades" replace />} />
+                  <Route
+                    path="evaluaciones/cuestionarios"
+                    element={
+                      <ComingSoon
+                        titulo="Cuestionarios"
+                        descripcion="Aquí podrás ver y responder los cuestionarios de este curso. Esta función está en construcción."
+                      />
+                    }
+                  />
+                  <Route path="evaluaciones/actividades" element={<ActividadesTab />} />
+                  <Route
+                    path="evaluaciones/encuestas"
+                    element={
+                      <ComingSoon
+                        titulo="Encuestas"
+                        descripcion="Aquí podrás ver y responder las encuestas de este curso. Esta función está en construcción."
+                      />
+                    }
+                  />
+                  <Route
+                    path="calificaciones"
+                    element={
+                      <ComingSoon
+                        titulo="Calificaciones"
+                        descripcion="Aquí podrás ver el resumen de calificaciones de este curso. Esta función está en construcción."
+                      />
+                    }
+                  />
+                  <Route
+                    path="asistencia"
+                    element={
+                      <ComingSoon
+                        titulo="Asistencia"
+                        descripcion="Aquí podrás ver y registrar la asistencia de este curso. Esta función está en construcción."
+                      />
+                    }
+                  />
+                  <Route
+                    path="alumnos"
+                    element={
+                      <ComingSoon
+                        titulo="Lista de alumnos"
+                        descripcion="Aquí podrás ver el listado de estudiantes matriculados en este curso. Esta función está en construcción."
+                      />
+                    }
+                  />
+                </Route>
               </Route>
 
               <Route element={<RoleRoute allow={['profesor']} />}>
-                <Route
-                  path="actividades"
-                  element={
-                    <ComingSoon
-                      titulo="Gestión de actividades"
-                      descripcion="Aquí podrás asignar y calificar las actividades de las materias que impartes. Esta función está en construcción."
-                    />
-                  }
-                />
                 <Route
                   path="asistencia"
                   element={

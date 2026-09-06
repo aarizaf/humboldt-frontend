@@ -3,7 +3,7 @@ import type { UserRole } from '../types/dashboard';
 export function homeForRole(role: UserRole): string {
   switch (role) {
     case 'profesor':
-      return '/dashboard/actividades';
+      return '/dashboard/materias';
     case 'admin':
       return '/dashboard/horarios';
     case 'estudiante':

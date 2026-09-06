@@ -7,7 +7,7 @@ const INSTAGRAM_POSTS = [
 function InstagramFeed() {
   return (
     <section className="instagram-section">
-      <h2 className="instagram-title">Síguenos en Instagram</h2>
+      <h2 className="instagram-title">¿Qué está pasando en Humboldt?</h2>
       <div className="instagram-posts">
         {INSTAGRAM_POSTS.map((post) => (
           <iframe

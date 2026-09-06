@@ -1,5 +1,5 @@
 import type { IconType } from 'react-icons';
-import { FiBookOpen, FiCheckSquare, FiClipboard, FiCalendar, FiBarChart2, FiUsers } from 'react-icons/fi';
+import { FiBookOpen, FiCheckSquare, FiCalendar, FiBarChart2, FiUsers } from 'react-icons/fi';
 import type { UserRole } from '../types/dashboard';
 
 export interface DashboardNavItem {
@@ -10,8 +10,7 @@ export interface DashboardNavItem {
 }
 
 export const DASHBOARD_NAV_ITEMS: DashboardNavItem[] = [
-  { label: 'Mis materias', to: '/dashboard/materias', roles: ['estudiante'], icon: FiBookOpen },
-  { label: 'Actividades', to: '/dashboard/actividades', roles: ['profesor'], icon: FiClipboard },
+  { label: 'Mis cursos', to: '/dashboard/materias', roles: ['estudiante', 'profesor'], icon: FiBookOpen },
   { label: 'Asistencia', to: '/dashboard/asistencia', roles: ['profesor'], icon: FiCheckSquare },
   { label: 'Horarios', to: '/dashboard/horarios', roles: ['admin'], icon: FiCalendar },
   { label: 'Reportes', to: '/dashboard/reportes', roles: ['admin'], icon: FiBarChart2 },
