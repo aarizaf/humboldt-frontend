@@ -65,14 +65,14 @@
 }
 
 .register-link {
-  color: #1a5d1a;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .register-link:hover {
-  color: #145214;
+  color: var(--color-primary-dark);
   text-decoration: underline;
 }
 

@@ -14,8 +14,8 @@ function ValuesSection() {
     <section className="values-section" id="valores">
       <div className="values-block">
         <h3 className="values-title">
-          {SHERR_LETTERS.map(({ char, color }) => (
-            <span key={char} className={`sherr-color ${color}`}>{char}</span>
+          {SHERR_LETTERS.map(({ char, color }, index) => (
+            <span key={`${char}-${index}`} className={`sherr-color ${color}`}>{char}</span>
           ))}
           <span>  Valores</span>
         </h3>

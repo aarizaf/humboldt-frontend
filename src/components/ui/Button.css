@@ -1,0 +1,8 @@
+.ui-button {
+  font-family: inherit;
+}
+
+.ui-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

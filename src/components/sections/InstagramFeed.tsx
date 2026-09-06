@@ -15,7 +15,6 @@ function InstagramFeed() {
             src={post.src}
             title={post.title}
             className="instagram-embed"
-            allowTransparency
             frameBorder={0}
             scrolling="no"
           />
