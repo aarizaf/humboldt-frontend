@@ -1,10 +1,23 @@
-import type { Actividad, Curso, EntregaActividad, Materia } from '../types/dashboard';
+import type { Actividad, Curso, Estudiante, EntregaActividad, Materia, Profesor } from '../types/dashboard';
 
 export const ESTUDIANTE_DEMO_ID = 'estudiante1';
 
 export const SEED_CURSOS: Curso[] = [
   { id: 'curso-10a', nombre: '10-A' },
   { id: 'curso-11a', nombre: '11-A' },
+];
+
+export const SEED_PROFESORES: Profesor[] = [
+  { id: 'profesor1', nombre: 'Prof. Camilo Ríos' },
+  { id: 'profesor2', nombre: 'Prof. Laura Gómez' },
+  { id: 'profesor3', nombre: 'Prof. Diana Torres' },
+];
+
+export const SEED_ESTUDIANTES: Estudiante[] = [
+  { id: 'estudiante1', nombre: 'Ana Martínez', cursoId: 'curso-10a' },
+  { id: 'estudiante2', nombre: 'Juan Pérez', cursoId: 'curso-10a' },
+  { id: 'estudiante3', nombre: 'Sofía Ramírez', cursoId: 'curso-11a' },
+  { id: 'estudiante4', nombre: 'Carlos Londoño', cursoId: null },
 ];
 
 export const SEED_MATERIAS: Materia[] = [

@@ -10,6 +10,10 @@ import DashboardIndex from './pages/dashboard/DashboardIndex';
 import MisMaterias from './pages/dashboard/materias/MisMaterias';
 import MateriaLayout from './pages/dashboard/materias/MateriaLayout';
 import ActividadesTab from './pages/dashboard/materias/tabs/ActividadesTab';
+import AsignacionesLayout from './pages/dashboard/asignaciones/AsignacionesLayout';
+import EstudiantesTab from './pages/dashboard/asignaciones/tabs/EstudiantesTab';
+import MateriasTab from './pages/dashboard/asignaciones/tabs/MateriasTab';
+import ProfesoresTab from './pages/dashboard/asignaciones/tabs/ProfesoresTab';
 import ComingSoon from './components/ComingSoon';
 
 function App() {
@@ -111,13 +115,13 @@ function App() {
                 />
                 <Route
                   path="asignaciones"
-                  element={
-                    <ComingSoon
-                      titulo="Asignaciones"
-                      descripcion="Aquí podrás asignar estudiantes a los cursos. Esta función está en construcción."
-                    />
-                  }
-                />
+                  element={<AsignacionesLayout />}
+                >
+                  <Route index element={<Navigate to="estudiantes" replace />} />
+                  <Route path="estudiantes" element={<EstudiantesTab />} />
+                  <Route path="materias" element={<MateriasTab />} />
+                  <Route path="profesores" element={<ProfesoresTab />} />
+                </Route>
               </Route>
             </Route>
           </Route>

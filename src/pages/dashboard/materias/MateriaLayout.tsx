@@ -44,7 +44,7 @@ function MateriaLayout() {
         <div className="materia-banner-overlay">
           <h1 className="materia-banner-title">{materia.nombre}</h1>
           <p className="materia-banner-meta">
-            {materia.cursoNombre} · {materia.profesorNombre}
+            {materia.cursoNombre} · {materia.profesorNombre ?? 'Sin profesor asignado'}
           </p>
         </div>
       </div>

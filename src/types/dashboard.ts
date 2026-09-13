@@ -12,13 +12,24 @@ export interface Curso {
   nombre: string;
 }
 
+export interface Profesor {
+  id: string;
+  nombre: string;
+}
+
+export interface Estudiante {
+  id: string;
+  nombre: string;
+  cursoId: string | null;
+}
+
 export interface Materia {
   id: string;
   nombre: string;
   cursoId: string;
   cursoNombre: string;
-  profesorId: string;
-  profesorNombre: string;
+  profesorId: string | null;
+  profesorNombre: string | null;
   imagenUrl: string;
 }
 

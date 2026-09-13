@@ -19,7 +19,7 @@ function MateriaCard({ materia, onClick }: MateriaCardProps) {
       <div className="materia-card-body">
         <h3 className="materia-card-title">{materia.nombre}</h3>
         <p className="materia-card-meta">
-          {materia.cursoNombre} · {materia.profesorNombre}
+          {materia.cursoNombre} · {materia.profesorNombre ?? 'Sin profesor asignado'}
         </p>
       </div>
     </button>
